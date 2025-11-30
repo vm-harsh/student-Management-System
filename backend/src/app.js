@@ -1,22 +1,14 @@
 const express = require('express');
 const dotenv = require('dotenv');
 dotenv.config();
-const {con} = require('./db/db');
+const studentRoutes = require('./routes/studentRoutes');
 
 
 const app = express();
+app.use(express.json());
 
-app.get('/hello',(req,res)=>{
-  res.send("Hello World");
-})
+app.use('/api/students', studentRoutes);
 
-// con.query('SELECT * FROM students',(err,res)=>{
-//   if(!err){
-//     console.log(res.rows);
-//   }else{
-//     console.log(err.message);
-//   }
-// })
 
 
 module.exports = app;
