@@ -1,0 +1,184 @@
+.student-details-container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.back-btn {
+  background-color: #666;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-bottom: 20px;
+  transition: background-color 0.3s;
+}
+
+.back-btn:hover {
+  background-color: #555;
+}
+
+.details-card {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.details-card h1 {
+  color: #333;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.details-view {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.detail-item {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.detail-item:last-child {
+  border-bottom: none;
+}
+
+.detail-item .label {
+  font-weight: 600;
+  color: #333;
+}
+
+.detail-item .value {
+  color: #666;
+  word-break: break-word;
+}
+
+.details-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: inherit;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.2);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.action-buttons,
+.form-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.edit-btn,
+.save-btn {
+  background-color: #2196F3;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  flex: 1;
+}
+
+.edit-btn:hover,
+.save-btn:hover {
+  background-color: #0b7dda;
+}
+
+.delete-btn,
+.cancel-btn {
+  background-color: #f44336;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  flex: 1;
+}
+
+.delete-btn:hover,
+.cancel-btn:hover {
+  background-color: #da190b;
+}
+
+.error-message {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  border: 1px solid #f5c6cb;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .details-card {
+    padding: 20px;
+  }
+
+  .detail-item {
+    grid-template-columns: 100px 1fr;
+    gap: 10px;
+  }
+
+  .action-buttons,
+  .form-buttons {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+}
